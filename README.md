@@ -11,8 +11,8 @@ This project demonstrates how you can easily create an app with functionality to
 The real magical things is taking place in `func renderingForFinalImage(images: [UIImage])-> UIImage` 
 
 
-private func renderingForFinalImage(images: [UIImage])-> UIImage {
-    guard let size = images.first?.size else { return UIImage(named: "optimal")! }
+`private func renderingForFinalImage(images: [UIImage])-> UIImage {`
+    `guard let size = images.first?.size else { return UIImage(named: "optimal")! }`
     
     let renderer = UIGraphicsImageRenderer(size: size)
     
@@ -23,4 +23,4 @@ private func renderingForFinalImage(images: [UIImage])-> UIImage {
     }
     
     return output
-}
+`}`
