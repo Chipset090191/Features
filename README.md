@@ -2,17 +2,14 @@
 Some awesome and helpful technics
 
 ### 1. Create a Dressed charachter (2d Vector Graphics prj)
-This project demonstrates how you can easily create an app with functionality to dress charackter by using Vector graphics 2d images with help out of UIImageRenderer.
+This project showcases how to efficiently create an application that allows users to dress a character using 2D vector graphic images, leveraging the capabilities of `UIImageRenderer`.
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/4e95eb97-87e1-449e-bd71-2b3c995a844f" controls width="600"></video>
 </div>
 
-The real magical things is taking place in `func renderingForFinalImage(images: [UIImage])-> UIImage` 
+The core functionality is handled by the method `func renderingForFinalImage(images: [UIImage])-> UIImage` 
 
-
-`private func renderingForFinalImage(images: [UIImage])-> UIImage {`
-    `guard let size = images.first?.size else { return UIImage(named: "optimal")! }`
     
     let renderer = UIGraphicsImageRenderer(size: size)
     
@@ -23,4 +20,5 @@ The real magical things is taking place in `func renderingForFinalImage(images: 
     }
     
     return output
-`}`
+
+This method generates the final composite image by sequentially drawing each UIImage from the input array. The images are ordered by their respective layers, ensuring the correct visual stacking. As a result, the output contains the fully rendered, dressed character.
